@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import App from './react-高级指引/App_Context初体验';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

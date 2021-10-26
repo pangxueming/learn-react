@@ -1,5 +1,4 @@
-import React from 'react';
-import './App.css';
+import React, { useContext } from 'react';
 
 // 步骤一
 const ThemeContext = React.createContext('light')
@@ -36,13 +35,10 @@ class ThemedButton extends React.Component {
 }
 
 function Button() {
+  const theme = useContext(ThemeContext);
   // 函数式组件中使用Context 
   return (
-    <ThemeContext.Consumer>
-      {value => {
-        return <button>{value}</button>
-      }}
-    </ThemeContext.Consumer>
+    <button> {theme}</button>
   )
 }
 
