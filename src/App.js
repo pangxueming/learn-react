@@ -1,10 +1,10 @@
 import React from 'react';
-import SetStateComp from './react-核心概念/setState的使用/setState不可变的力量'
+import Ref from './react-高级指引/ref/App'
 
 function App() {
 
   return (
-    <SetStateComp />
+    <Ref />
   )
 }
 
