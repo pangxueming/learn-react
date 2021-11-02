@@ -1,10 +1,10 @@
 import React from 'react';
-import ThemedButton from './react-高级指引/动态Context/themed-button'
+import FormCpn from './react-高级指引/受控组件和非受控组件/02_非受控组件'
 
 function App() {
 
   return (
-    <ThemedButton title="改变文本" />
+    <FormCpn />
   )
 }
 
