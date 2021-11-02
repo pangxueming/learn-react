@@ -1,10 +1,10 @@
 import React from 'react';
-import Ref from './react-高级指引/ref/App'
+import ThemedButton from './react-高级指引/动态Context/themed-button'
 
 function App() {
 
   return (
-    <Ref />
+    <ThemedButton title="改变文本" />
   )
 }
 
