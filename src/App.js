@@ -1,11 +1,12 @@
 import React from 'react';
-import FormCpn from './react-高级指引/受控组件和非受控组件/02_非受控组件'
+import HOCCpn from './react-高级指引/高阶组件/05_App_高阶组件的应用-登录鉴权'
 
-function App() {
-
+function App(props) {
   return (
-    <FormCpn />
+    <HOCCpn {...props} />
   )
 }
+
+App.displayName = 'AppCpn'
 
 export default App;
