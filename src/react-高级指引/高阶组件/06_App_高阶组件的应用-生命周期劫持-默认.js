@@ -2,14 +2,14 @@ import React, { PureComponent } from 'react'
 
 class Home extends PureComponent {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.beginTime = new Date();
   }
 
   componentDidMount() {
     this.endTime = new Date();
     const intervel = this.endTime - this.beginTime;
-    console.log("Hom组件渲染时间: " + intervel);
+    console.log("Home组件渲染时间: " + intervel);
   }
 
   render() {
@@ -23,14 +23,14 @@ class Home extends PureComponent {
 
 class About extends PureComponent {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.beginTime = new Date();
   }
 
   componentDidMount() {
     this.endTime = new Date();
     const intervel = this.endTime - this.beginTime;
-    console.log("Hom组件渲染时间: " + intervel);
+    console.log("About组件渲染时间: " + intervel);
   }
 
   render() {
