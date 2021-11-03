@@ -1,12 +1,10 @@
 import React from 'react';
-import HOCCpn from './react-高级指引/高阶组件/06_App_高阶组件的应用-生命周期劫持-增强'
+import Portals from './react-高级指引/Portals/02_App_通过portals进行冒泡'
 
-function App(props) {
+function App() {
   return (
-    <HOCCpn {...props} />
+    <Portals />
   )
 }
-
-App.displayName = 'AppCpn'
 
 export default App;
