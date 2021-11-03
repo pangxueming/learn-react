@@ -1,9 +1,9 @@
 import React from 'react';
-import StrictMode from './react-高级指引/严格模式/App'
+import ReactCSS from './react-css/01_内联样式/01_App'
 
 function App() {
   return (
-    <StrictMode />
+    <ReactCSS />
   )
 }
 
