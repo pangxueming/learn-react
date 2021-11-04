@@ -10,7 +10,7 @@ const ProfileInput = styled.input.attrs({
 })`
   background-color: skyblue;
   border-color: ${props => props.bColor};
-  color:${props => props.color}
+  color:${props => props.color};
 `
 
 export default class Profile extends PureComponent {
