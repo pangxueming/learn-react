@@ -14,4 +14,3 @@ ReactDOM.render(
       <App />
     </ConfigProvider>
   </StrictMode>, document.getElementById('app-root'));
-
