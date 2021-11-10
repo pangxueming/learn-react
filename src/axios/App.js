@@ -59,6 +59,39 @@ export default class App extends PureComponent {
     } catch (err) {
       console.log(err);
     }
+
+    const request1 = axios.get('https://httpbin.org/get', {
+      params: {
+        name: 'zhangsan',
+        age: 21
+      }
+    })
+
+    const request2 = axios.post('https://httpbin.org/post', {
+      name: 'lisi',
+      age: 22
+    })
+
+    axios.all([request1, request2]).then(data => {
+      console.log(data);
+    })
+
+    // axios.all() 的本质是调用了 Promise.all()
+    const promise1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("2000")
+      }, 2000)
+    })
+
+    const promise2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("3000")
+      }, 3000)
+    })
+
+    Promise.all([promise1, promise2]).then(data => {
+      console.log(data);
+    })
   }
 
   render() {
