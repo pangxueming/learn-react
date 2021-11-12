@@ -22,11 +22,14 @@ export default class App extends PureComponent {
           {names.map((item, index) => {
             return (
               <CSSTransition
-                key={index}
+                key={item}
                 timeout={500}
                 classNames="item"
               >
-                <li key={index}>{item}</li>
+                <div>
+                  {item}
+                  <Button onClick={e => this.removeItem(index)}>-</Button>
+                </div>
               </CSSTransition>)
           })}
         </TransitionGroup>
@@ -38,6 +41,15 @@ export default class App extends PureComponent {
   addName() {
     this.setState({
       names: [...this.state.names, 'zhaoliu']
+    })
+  }
+
+  removeItem(index) {
+    const newNames = [...this.state.names]
+    newNames.splice(index, 1)
+    // array.splice(start number,length) 返回值是被删除的值 该方法会改变原数组
+    this.setState({
+      names: newNames
     })
   }
 }
