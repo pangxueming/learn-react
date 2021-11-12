@@ -1,0 +1,98 @@
+  /* 1.CSSTransition */
+  .card-appear,
+  .card-enter {
+    opacity: 0;
+    transform: scale(.6);
+  }
+
+  .card-appear-active,
+  .card-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+  }
+
+  .card-appear-done,
+  .card-enter-done {
+    opacity: 1;
+  }
+
+  .card-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .card-exit-active {
+    opacity: 0;
+    transform: scale(.6);
+    transition: all 300ms;
+  }
+
+  .card-exit-done {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  /* 2.SwitchTransition */
+  .btn-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .btn-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1000ms, transform 1000ms;
+  }
+
+  .btn-enter-done {
+    opacity: 1;
+  }
+
+  .btn-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .btn-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1000ms, transform 1000ms;
+  }
+
+  .btn-exit-done {
+    opacity: 0;
+  }
+
+  /* 3.TransitionGroup */
+
+  .item-enter {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  .item-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 500ms, transform 500ms;
+  }
+
+  .item-enter-done {
+    opacity: 1;
+    color: red;
+  }
+
+  .item-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .item-exit-active {
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 500ms, transform 500ms;
+  }
+
+  .item-exit-done {
+    opacity: 0;
+  }
