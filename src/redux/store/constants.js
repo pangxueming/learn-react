@@ -1,0 +1,4 @@
+export const INCREMENT_NUMBER = 'INCREMENT_NUMBER';
+export const DECREMENT_NUMBER = 'DECREMENT_NUMBER';
+export const ADD_NUMBER = 'ADD_NUMBER';
+export const SUB_NUMBER = 'SUB_NUMBER';
