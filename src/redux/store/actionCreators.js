@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 import {
   INCREMENT_NUMBER,
   DECREMENT_NUMBER,
@@ -46,4 +48,15 @@ export const changeRecommendAction = (recommends) => {
     type: CHANGE_RECOMMENDS,
     recommends
   }
+}
+
+// redux-thunk定义的action函数
+export const getHomeMutilDataAction = dispatch => {
+  axios({
+    url: 'http://123.207.32.32:8000/home/multidata'
+  }).then(res => {
+    const data = res.data.data;
+    dispatch(changeBannerAction(data.banner.list));
+    dispatch(changeRecommendAction(data.recommend.list));
+  })
 }
