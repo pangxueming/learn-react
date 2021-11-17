@@ -9,8 +9,8 @@ import {
 
 const initalState = {
   counter: 0,
-  banner: [],
-  recommend: []
+  banners: [],
+  recommends: []
 }
 
 function reducer(state = initalState, action) {

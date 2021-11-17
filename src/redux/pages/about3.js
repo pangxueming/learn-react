@@ -11,6 +11,7 @@ import {
 } from '../store/actionCreators';
 
 function About(props) {
+  console.log(props);
   return (
     <div>
       <h1>About3</h1>
@@ -18,21 +19,21 @@ function About(props) {
       <Button onClick={e => props.decrement()}>-1</Button>
       <Button onClick={e => props.subNumber(5)}>-5</Button>
       <h2>banner</h2>
-      {props.banners && <ul>
+      <ul>
         {
           props.banners.map((item) => {
             return <li key={item.acm}>{item.title}</li>
           })
         }
-      </ul>}
+      </ul>
       <h2>recommend</h2>
-      {props.recommends && <ul>
+      <ul>
         {
           props.recommends.map((item) => {
             return <li key={item.acm}>{item.title}</li>
           })
         }
-      </ul>}
+      </ul>
     </div>
   )
 }
