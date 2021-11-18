@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-import Home from './pages/home4-redux-thunk'
+import Home from './pages/home5-redux-saga'
 import About from './pages/about3'
 
 // import { StoreContext } from './utils/context'

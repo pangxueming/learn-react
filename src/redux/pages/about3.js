@@ -11,7 +11,6 @@ import {
 } from '../store/actionCreators';
 
 function About(props) {
-  console.log(props);
   return (
     <div>
       <h1>About3</h1>

@@ -6,7 +6,8 @@ import {
   ADD_NUMBER,
   SUB_NUMBER,
   CHANGE_BANNERS,
-  CHANGE_RECOMMENDS
+  CHANGE_RECOMMENDS,
+  FETCH_HOME_MULTIDATA
 } from './constants'
 
 export const increment = () => {
@@ -59,4 +60,9 @@ export const getHomeMutilDataAction = dispatch => {
     dispatch(changeBannerAction(data.banner.list));
     dispatch(changeRecommendAction(data.recommend.list));
   })
+}
+
+// redux-saga拦截的action
+export const fetchHomeMultiDataAction = {
+  type: FETCH_HOME_MULTIDATA
 }
