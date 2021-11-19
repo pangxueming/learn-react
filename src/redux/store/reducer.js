@@ -1,35 +1,18 @@
-import {
-  INCREMENT_NUMBER,
-  DECREMENT_NUMBER,
-  ADD_NUMBER,
-  SUB_NUMBER,
-  CHANGE_BANNERS,
-  CHANGE_RECOMMENDS
-} from './constants';
+import { combineReducers } from 'redux'
 
-const initalState = {
-  counter: 0,
-  banners: [],
-  recommends: []
-}
+import { reducer as counterReducer } from './counter'
+import { reducer as homeReducer } from './home'
 
-function reducer(state = initalState, action) {
-  switch (action.type) {
-    case INCREMENT_NUMBER:
-      return { ...state, counter: state.counter + 1 }
-    case DECREMENT_NUMBER:
-      return { ...state, counter: state.counter - 1 }
-    case ADD_NUMBER:
-      return { ...state, counter: state.counter + action.num }
-    case SUB_NUMBER:
-      return { ...state, counter: state.counter - action.num }
-    case CHANGE_BANNERS:
-      return { ...state, banners: action.banners }
-    case CHANGE_RECOMMENDS:
-      return { ...state, recommends: action.recommends }
-    default:
-      return state;
-  }
-}
+// function reducer(state = {}, action) {
+//   return {
+//     counterInfo: counterReducer(state.counterInfo, action),
+//     homeInfo: homeReducer(state.homeInfo, action)
+//   }
+// }
+
+const reducer = combineReducers({
+  counterInfo: counterReducer,
+  homeInfo: homeReducer
+})
 
 export default reducer;

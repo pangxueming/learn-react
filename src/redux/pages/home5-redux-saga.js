@@ -6,9 +6,11 @@ import { connect } from 'react-redux'
 
 import {
   increment,
-  addAction,
+  addAction
+} from '../store/counter/actionCreators'
+import {
   fetchHomeMultiDataAction
-} from '../store/actionCreators'
+} from '../store/home/actionCreators'
 
 class Home extends PureComponent {
 
@@ -19,7 +21,7 @@ class Home extends PureComponent {
   render() {
     return (
       <div>
-        <h1>Home4</h1>
+        <h1>Home5</h1>
         <h2>当前计数:{this.props.counter}</h2>
         <Button onClick={e => this.props.increment()}>+1</Button>
         <Button onClick={e => this.props.addAction(5)}>+5</Button>
@@ -30,9 +32,9 @@ class Home extends PureComponent {
 
 const mapStateToProps = state => {
   return {
-    counter: state.counter,
-    banners: state.banners,
-    recommends: state.recommends
+    counter: state.counterInfo.counter,
+    banners: state.homeInfo.banners,
+    recommends: state.homeInfo.recommends
   }
 }
 
